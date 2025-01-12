@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.learnwith.hiskytechnologies"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.learnwith.hiskytechnologies"

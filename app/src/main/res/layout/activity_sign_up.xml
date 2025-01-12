@@ -1,46 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg4"
     tools:context=".Ui.Activity_SignUp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="center"
+        android:src="@drawable/logo_for_login_screen"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/tvSignup"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Sign Up"
-        android:textSize="30dp"
-     android:layout_marginTop="35dp"
- />
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+         />
+
+    <ImageView
+        android:id="@+id/ivFlash"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/flash"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toRightOf="@id/tvSignup"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintBottom_toTopOf="@+id/etName"
+        android:layout_marginBottom="8dp"
+        />
 
     <EditText
         android:id="@+id/etName"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvSignup"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_et_design"
+        android:drawableStart="@drawable/baseline_person_24"
         android:hint="Name"
-        android:textSize="20dp"
-       />
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/tvSignup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
     <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="match_parent"
+        android:id="@+id/etEmail"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/etName"
-        android:hint="Password"
-        android:textSize="20dp"
-       />
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_et_design"
+        android:drawableStart="@drawable/baseline_email_24"
+        android:hint="Email"
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/etName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <EditText
         android:id="@+id/etPhone"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/etPassword"
-        android:hint="Name"
-        android:textSize="20dp"
-       />
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_et_design"
+        android:drawableStart="@drawable/baseline_local_phone_24"
+        android:hint="Phone"
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/etEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <EditText
+        android:id="@+id/etIdCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_et_design"
+        android:drawableStart="@drawable/baseline_perm_identity_24"
+        android:drawableTint="@color/white"
+        android:hint="ID Card Number"
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/etPhone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-</RelativeLayout>
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_et_design"
+        android:drawableStart="@drawable/baseline_password_24"
+        android:hint="Password"
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/etIdCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/etConfirmPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_et_design"
+        android:drawableStart="@drawable/baseline_password_24"
+        android:hint="Confirm Password"
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
